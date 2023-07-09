@@ -7,8 +7,9 @@ We are using K-Nearest Neighbors for classification. Please refer the [train_mod
 Default number of neighbors: 50. To change this number, please change the [num_nb](./config.yaml)
 
 ## Usage
-To run the model training and inference: [./scripts/run.sh](./scripts/run.sh)
+To run the model training and inference: [./scripts/run_train.sh](./scripts/run_train.sh)
 To run the unit test: [./scripts/unit_test.sh](./scripts/unit_test.sh)
+To deploy Fast APIs: [./scripts/run_APIs.sh](./scripts/run_APIs.sh)
 
 ## Intended Use
 Predicting a person's annual salary is more than $50K based on his/her personal information, including:  
