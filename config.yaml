@@ -1,7 +1,13 @@
 data:
     raw: "data/census.csv"
     clean: "data/census_clean.csv"
+    x_test: "data/x_test.npy" 
+    y_test: "data/y_test.npy"
+feature:
+    encoder: "model/encoder.pkl"
+    lb: "model/lb.pkl"
 model: 
     test_size: 0.20
     num_nb: 50
+    save_path: "model/knn_model.pkl"
 debug: True

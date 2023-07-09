@@ -2,6 +2,8 @@ import pandas as pd
 import hydra
 from hydra.utils import to_absolute_path
 from omegaconf import DictConfig
+import pickle
+import numpy as np
 
 from sklearn.model_selection import train_test_split
 
@@ -60,9 +62,26 @@ def run(config: DictConfig):
         lb=lb_train)
     print(f'>> One hot encoding for test set... finished')
     
+    # save test sets for future use
+    with open(to_absolute_path(config["data"]["x_test"]), 'wb') as f:
+        np.save(f, X_test)
+
+    with open(to_absolute_path(config["data"]["y_test"]), 'wb') as f:
+        np.save(f, y_test)
+    
     # train model
     model = train_model(X_train, y_train, num_nb=config["model"]["num_nb"])
     print(f'>> Train model... finished')
+    
+    # save the trained model
+    with open(to_absolute_path(config["model"]["save_path"]), 'wb') as f:
+        pickle.dump(model, f)
+
+    with open(to_absolute_path(config["feature"]["encoder"]), 'wb') as f:
+        pickle.dump(encoder_train, f)
+
+    with open(to_absolute_path(config["feature"]["lb"]), 'wb') as f:
+        pickle.dump(lb_train, f)
     
     # predict
     y_pred = inference(model, X_test)
