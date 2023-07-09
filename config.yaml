@@ -1,0 +1,7 @@
+data:
+    raw: "data/census.csv"
+    clean: "data/census_clean.csv"
+model: 
+    test_size: 0.20
+    num_nb: 50
+debug: True
