@@ -1,0 +1,64 @@
+Feature: "education" - <Masters> 
+>> Precision: 0.9047619047619048 
+>> Recall: 0.1784037558685446 
+>> F1: 0.2980392156862745 
+Feature: "education" - <Some-college> 
+>> Precision: 0.9142857142857143 
+>> Recall: 0.12030075187969924 
+>> F1: 0.21262458471760798 
+Feature: "education" - <Bachelors> 
+>> Precision: 0.9855072463768116 
+>> Recall: 0.1514476614699332 
+>> F1: 0.2625482625482625 
+Feature: "education" - <HS-grad> 
+>> Precision: 0.8947368421052632 
+>> Recall: 0.1408839779005525 
+>> F1: 0.24343675417661098 
+Feature: "education" - <Assoc-voc> 
+>> Precision: 1.0 
+>> Recall: 0.1 
+>> F1: 0.18181818181818182 
+Feature: "education" - <Assoc-acdm> 
+>> Precision: 1.0 
+>> Recall: 0.1320754716981132 
+>> F1: 0.23333333333333334 
+Feature: "education" - <5th-6th> 
+>> Precision: 0.5 
+>> Recall: 0.25 
+>> F1: 0.3333333333333333 
+Feature: "education" - <10th> 
+>> Precision: 1.0 
+>> Recall: 0.08333333333333333 
+>> F1: 0.15384615384615385 
+Feature: "education" - <Prof-school> 
+>> Precision: 1.0 
+>> Recall: 0.4025974025974026 
+>> F1: 0.5740740740740741 
+Feature: "education" - <9th> 
+>> Precision: 1.0 
+>> Recall: 0.0 
+>> F1: 0.0 
+Feature: "education" - <12th> 
+>> Precision: 1.0 
+>> Recall: 0.25 
+>> F1: 0.4 
+Feature: "education" - <11th> 
+>> Precision: 1.0 
+>> Recall: 0.5 
+>> F1: 0.6666666666666666 
+Feature: "education" - <7th-8th> 
+>> Precision: 0.6666666666666666 
+>> Recall: 0.2 
+>> F1: 0.30769230769230765 
+Feature: "education" - <Doctorate> 
+>> Precision: 1.0 
+>> Recall: 0.2807017543859649 
+>> F1: 0.4383561643835616 
+Feature: "education" - <1st-4th> 
+>> Precision: 1.0 
+>> Recall: 0.5 
+>> F1: 0.6666666666666666 
+Feature: "education" - <Preschool> 
+>> Precision: 1.0 
+>> Recall: 1.0 
+>> F1: 1.0 
