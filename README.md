@@ -29,11 +29,15 @@ pip install -r requirements.txt
 ./scripts/run_APIs.sh
 ```
 
-4 - Check FastAPIs from a browser:
+4 - Create a REST API:
 ```bash
 http://127.0.0.1:8000/docs
 ```
 <img src="screenshots/example.png">
+
+5 - Query live API 
+
+<img src="screenshots/live_post.png">
 
 
 5 - Enable CI using Github Action when pushing a new commit
@@ -45,5 +49,5 @@ git push
 ```bash
 https://dashboard.render.com/
 ```
-<img src="screenshots/live_post.png">
+<img src="screenshots/continuous_deloyment.png">
 
