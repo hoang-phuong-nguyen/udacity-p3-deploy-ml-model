@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ```bash
 ./scripts/unit_test.sh
 ```
-- [test_data.py](./starter/ml/test_data.py): test data cleaning & model 
+- [test_model.py](./starter/ml/test_model.py): test data cleaning & model 
 - [test_app.py](./test_app.py): test FastAPIs
 
 
