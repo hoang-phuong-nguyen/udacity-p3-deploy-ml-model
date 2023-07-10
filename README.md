@@ -46,6 +46,7 @@ http://127.0.0.1:8000/docs
 ```bash
 git push
 ```
+<img src="screenshots/continuous_integration.png">
 
 8 - Enable CD on Render.com Cloud Platfom 
 ```bash
