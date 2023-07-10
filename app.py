@@ -1,8 +1,9 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+from fastapi import Body, FastAPI
+from pydantic import BaseModel, Field
 from typing import Optional
 import pickle
 import pandas as pd
+from typing_extensions import Annotated
 
 from starter.ml.model import inference
 from starter.ml.data import process_data
@@ -11,20 +12,20 @@ from starter.ml.data import process_data
 
 
 class UserInfo(BaseModel):
-    age: int
-    workclass: Optional[str]
-    fnlgt: int
-    education: Optional[str]
-    education_num: int
-    marital_status: Optional[str]
-    occupation: Optional[str]
-    relationship: Optional[str]
-    race: Optional[str]
-    sex: Optional[str]
-    capital_gain: int
-    capital_loss: int
-    hours_per_week: int
-    native_country: Optional[str]
+    age: int = Field(..., example=31)
+    workclass: Optional[str] = Field(..., example="Private")
+    fnlgt: int = Field(..., example=45781)
+    education: Optional[str] = Field(..., example="Masters")
+    education_num: int = Field(..., example=14)
+    marital_status: Optional[str] = Field(..., example="Never-married")
+    occupation: Optional[str] = Field(..., example="Prof-specialty")
+    relationship: Optional[str] = Field(..., example="Not-in-family")
+    race: Optional[str] = Field(..., example="White")
+    sex: Optional[str] = Field(..., example="Female")
+    capital_gain: int = Field(..., example=14084)
+    capital_loss: int = Field(..., example=0)
+    hours_per_week: int = Field(..., example=50)
+    native_country: Optional[str] = Field(..., example="United-States")
 
 
 # instantiate the app
