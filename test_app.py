@@ -2,19 +2,22 @@ import pytest
 from fastapi.testclient import TestClient
 from app import app
 
+
 @pytest.fixture
 def client():
     client = TestClient(app)
     return client
+
 
 def test_say_hello(client):
     resp = client.get("/")
     assert resp.status_code == 200
     assert resp.json() == {"greeting": "Hello World!"}
 
+
 def test_predict_postive(client):
     resp = client.post(
-        "/predict", 
+        "/predict",
         json={
             "age": 31,
             "workclass": "Private",
@@ -35,9 +38,10 @@ def test_predict_postive(client):
     assert resp.status_code == 200
     assert resp.json() == {"Salary": ">50K"}
 
+
 def test_predict_negative(client):
     resp = client.post(
-        "/predict", 
+        "/predict",
         json={
             "age": 39,
             "workclass": "State-gov",

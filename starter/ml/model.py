@@ -21,13 +21,14 @@ def train_model(X_train, y_train, num_nb=5):
     # KNN
     model = KNeighborsClassifier(n_neighbors=num_nb)
     model.fit(X_train, y_train)
-        
+
     return model
 
 
 def compute_model_metrics(y, preds):
     """
-    Validates the trained machine learning model using precision, recall, and F1.
+    Validates the trained machine learning model using precision, recall,
+    and F1.
 
     Inputs
     ------
@@ -62,4 +63,4 @@ def inference(model, X):
         Predictions from the model.
     """
     preds = model.predict(X)
-    return preds 
+    return preds

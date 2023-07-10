@@ -2,14 +2,14 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
 import pickle
-import numpy as np
-import os
 import pandas as pd
 
 from starter.ml.model import inference
 from starter.ml.data import process_data
 
 # the data object with user information
+
+
 class UserInfo(BaseModel):
     age: int
     workclass: Optional[str]
@@ -25,16 +25,21 @@ class UserInfo(BaseModel):
     capital_loss: int
     hours_per_week: int
     native_country: Optional[str]
-    
+
+
 # instantiate the app
 app = FastAPI()
 
 # GET on the root giving a welcome message
+
+
 @app.get("/")
 async def say_hello():
     return {"greeting": "Hello World!"}
 
 # POST that does model inference
+
+
 @app.post("/predict/")
 async def predict(data: UserInfo):
     # convert data to dataframe
@@ -50,8 +55,8 @@ async def predict(data: UserInfo):
 
     with open("model/lb.pkl", 'rb') as f:
         lb = pickle.load(f)
-    
-    # encode data      
+
+    # encode data
     cat_features = [
         "workclass",
         "education",
@@ -65,8 +70,8 @@ async def predict(data: UserInfo):
     X_test, _, _, _ = process_data(
         X=df,
         categorical_features=cat_features,
-        encoder=encoder, 
-        lb=lb, 
+        encoder=encoder,
+        lb=lb,
         training=False)
 
     # inference
