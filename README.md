@@ -37,9 +37,9 @@ http://127.0.0.1:8000/docs
 git push
 ```
 
-6 - Enable CD on Render.com
+6 - Enable CD on Render.com Cloud Platfom 
 ```bash
 https://dashboard.render.com/
 ```
-
+<img src="screenshots/live_post.png">
 
