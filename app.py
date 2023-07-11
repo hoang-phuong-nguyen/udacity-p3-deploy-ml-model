@@ -1,9 +1,8 @@
-from fastapi import Body, FastAPI
+from fastapi import FastAPI
 from pydantic import BaseModel, Field
 from typing import Optional
 import pickle
 import pandas as pd
-from typing_extensions import Annotated
 
 from starter.ml.model import inference
 from starter.ml.data import process_data
