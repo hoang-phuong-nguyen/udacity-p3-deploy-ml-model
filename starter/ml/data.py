@@ -70,7 +70,8 @@ def process_data(
         # Catch the case where y is None because we're doing inference.
         except AttributeError:
             pass
-
+    print(f'X_continuous: \n >> shape = {X_continuous.shape} \n >> data = {X_continuous}')
+    print(f'X_categorical: \n >> shape = {X_categorical.shape} \n >> data = {X_categorical}')    
     X = np.concatenate([X_continuous, X_categorical], axis=1)
     return X, y, encoder, lb
 
